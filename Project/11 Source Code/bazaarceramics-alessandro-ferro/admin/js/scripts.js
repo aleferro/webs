@@ -197,6 +197,7 @@ function updateProduct() {
         $('#size').val(x[6].innerHTML);
         $('#glaze').val(x[7].innerHTML);
         $('#rowcounter').val(x[8].innerHTML);
+        $("#updateProdNotification").html("");
         $('#updateProdModal').modal('show');
       });
     
@@ -243,12 +244,17 @@ function updateProduct() {
       });
 }
 
-
+// FUNCTION TO VALIDATE EMAIL TO CREATE A NEW CUSTOMER
+function validateEmail(email) {
+  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+}
 
 // FUNCTION TO CREATE A NEW CUSTOMER
 function addNewCustomer() {
 
   $(".addCust").click(function(){
+    $("#addCustNotification").html("");
     $('#addCustModal').modal('show');
   });
 
@@ -258,8 +264,12 @@ function addNewCustomer() {
     var role = $("#role").val();
     var email = $("#email").val();
     var password = $("#password").val();
+
     if(email=="" || password=="") {
       $("#addCustNotification").html("**Email and Password are required**");
+    }
+    else if (!validateEmail(email)) {
+      $("#addCustNotification").html("**Please enter a valid email**");
     }
     else {
       $('#addCustModal').modal('hide');
@@ -301,6 +311,7 @@ function addNewCustomer() {
 // FUNCTION TO CREATE A NEW PRODUCT
 function addNewProduct() {
   $(".addProd").click(function(){
+    $("#addProdNotification").html("");
     $('#addProdModal').modal('show');
   });
 
