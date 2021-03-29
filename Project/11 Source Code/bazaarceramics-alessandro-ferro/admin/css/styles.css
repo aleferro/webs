@@ -1,0 +1,19 @@
+#toast{
+    margin: 0 auto;
+    border: solid 1px black;
+    background-color: rgb(245, 240, 218, 0.2) ;
+}
+#toastMessage{
+    font-size: large;
+    margin: 0 auto;
+    color: black;
+}
+#addCustNotification{
+    margin-right: 15%;
+}
+#addProdNotification{
+    margin-right: 15%;
+}
+#updateProdNotification{
+    margin-right: 15%;
+}

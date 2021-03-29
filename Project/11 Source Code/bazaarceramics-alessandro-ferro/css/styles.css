@@ -1,0 +1,47 @@
+.no-bullets-right {
+    list-style-type: none;
+    float: right;
+}
+.no-bullets-left {
+    list-style-type: none;
+    float: left;
+}
+.margin-top-8 {
+    margin-top: 4%;
+}
+.bottom-10 {
+    margin-bottom: 10%;
+}
+.bottom-15 {
+    margin-bottom: 15%;
+}
+.bottom-20 {
+    margin-bottom: 20%;
+}
+.bottom-30 {
+    margin-bottom: 30%;
+}
+.center-page {
+    margin-top: 18%;
+    text-align: center;
+    font-size: 4rem;
+}
+.position-right {
+    float: right;
+}
+.testcss {
+    color: red;
+}
+.quantityInCart{
+    width: 2rem;
+}
+#cartToast{
+    margin: 0 auto;
+    border: solid 1px black;
+    background-color: rgb(245, 240, 218, 0.2) ;
+}
+#cartToastMessage{
+    font-size: large;
+    margin: 0 auto;
+    color: black;
+}
